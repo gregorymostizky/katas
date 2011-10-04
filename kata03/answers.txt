@@ -1,0 +1,40 @@
+Bits:
+
+1000 - 10  ( 2^10)
+1000000 - 20 (10+10)
+1000000000 - 30
+1000000000000 - 40
+8000000000000 - 43
+
+
+Space:
+
+20000 residents * (12 + 20 + 40 ) --> 2MB (assuming each is fitted in 100 bytes on average)
+
+
+Tree:
+
+1,000,000 integers
+levels is just log -> about 20?
+nodes 2 * integers  ( all integer is node, prev level is half, then quarter and so on)
+32bit arch - each node is 2 pointers + integer -> 12 bytes * 2M nodes => 24 MB
+
+Speed:
+
+Page is 100 chars wide * 40 lines => around 5k?
+Total 1200 pages => 6000 K => 6MB => 60MBits
+
+56kbit line => 1000 seconds
+
+Algorithm:
+
+10000 - 4.5 ms
+100000 - 6ms
+
+Algo is O(logn) so 100000 takes twice of time as 10000  - meaning 3 ms is setup?
+
+So 100000*100 -> 4 times of 100000 -> 4*3 + 3 => 15ms
+
+Hacking:
+
+No - all permutations - 96^16 (something 5e+31) - even assuming millions of users chances of hit are very low
